@@ -68,7 +68,7 @@ training_filter <- training[-c(NZVtrainingData_position)]
 ```
 
 *Table 1*
-```{r,fig.cap="Figure 1", echo=FALSE}
+```{r, echo=FALSE}
 fig1
 ```
 
@@ -96,7 +96,7 @@ fig2 <- summary(training_filter[c(exclude_vars2_NA)]) # column summary of those 
 training_filter <- training_filter[-c(exclude_vars2_NA)]
 ```
 *Figure 2*
-```{r,fig.cap="Figure 2", echo=FALSE}
+```{r, echo=FALSE}
 fig2
 ```
 
@@ -111,7 +111,7 @@ fig3 <- names(training_filter[c(exclude_vars3_correlated)]) # columns having hig
 training_filter <- training_filter[-c(exclude_vars3_correlated)]
 ```
 *Figure 3*
-```{r,fig.cap="Figure 3", echo=FALSE}
+```{r, echo=FALSE}
 fig3
 ```
 
@@ -163,7 +163,7 @@ predFitTrain <- predict(classeFit,validationData[,-32], type = "class")
 fig5 <- confusionMatrix(predFitTrain, validationData$classe)
 ```
 *Figure 5*
-```{r,fig.cap="Figure 5", echo=FALSE}
+```{r, echo=FALSE}
 fig5
 ```
 
@@ -179,7 +179,7 @@ Predict using our randomforest model using our Test data and output the predicte
 predFitTest <- predict(classeFit,test_filter[,-32])
 ```
 *Figure 6*
-```{r,fig.cap="Figure 6", echo=FALSE}
+```{r, echo=FALSE}
 predFitTest
 ```
 
